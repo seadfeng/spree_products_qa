@@ -1,5 +1,5 @@
 class Spree::ProductAnswer < ActiveRecord::Base
-  belongs_to :product_question
+  belongs_to :product_question, touch: true 
 
   validates :content, presence: true
 

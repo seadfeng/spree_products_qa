@@ -1,5 +1,5 @@
 class Spree::ProductQuestion < ActiveRecord::Base
-  belongs_to :product
+  belongs_to :product, touch: true 
   belongs_to :user, optional: true
 
   has_one :product_answer, dependent: :destroy
