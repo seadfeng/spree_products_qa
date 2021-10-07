@@ -1,4 +1,4 @@
-class Spree::ProductAnswer < ActiveRecord::Base
+class Spree::ProductAnswer < Spree::Base
   belongs_to :product_question, touch: true 
 
   validates :content, presence: true

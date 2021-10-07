@@ -1,10 +1,11 @@
 <% if @product.product_questions.answered.visible.present? %>
+  <%= faq_structured_data(@product) %>
   <div class="col-12">
     <h4 class="product-section-title w-100 font-weight-bold"><%= t(:questions_and_answers) %></h4>
     <% @product.product_questions.answered.visible.each_with_index do |question, index| %>
       <div class="qna w-100">
         <div class="question"><span class="pr-2"><%=t(:q)%></span><%= "#{question.content}" %></div>
-        <div class="answer"><%= sanitize simple_format(question.product_answer.content), tags: %w(p b i br)  %></div>
+        <div class="answer ml-2"><%= sanitize simple_format(question.product_answer.content), tags: %w(p b i br)  %></div>
       </div>
     <% end %>
   </div>

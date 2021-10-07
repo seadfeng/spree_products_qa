@@ -1,4 +1,4 @@
-class Spree::ProductQuestion < ActiveRecord::Base
+class Spree::ProductQuestion < Spree::Base
   belongs_to :product, touch: true 
   belongs_to :user, optional: true
 
